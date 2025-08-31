@@ -14,13 +14,13 @@ import java.sql.*;
 
 //we simply make this class as a object and we use it
 
-public class conn {
+public class  Conn {
 
     Connection c;
-    Statement s;
-                // since we are connecting the databse so the chances is hight to get the errors
-                // WE HAVE TO DO EXCEPTIONAL HANDLING
-    public conn(){
+    public Statement s;
+    // since we are connecting the databse so the chances is hight to get the errors
+    // WE HAVE TO DO EXCEPTIONAL HANDLING
+    public Conn(){
         try {
             // 1 - here we are rigestering the diver
             c = DriverManager.getConnection("jdbc:mysql:///BankManagementSystem" ,"root","Abhishek@12");

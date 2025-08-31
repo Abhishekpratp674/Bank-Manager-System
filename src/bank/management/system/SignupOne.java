@@ -216,7 +216,7 @@ public class SignupOne extends JFrame implements ActionListener{
                 JOptionPane.showMessageDialog(null,"pincode is Required");
             }
             else {
-                conn c = new conn();
+                Conn c = new Conn();
                 String query = "INSERT INTO signup (formno, name, father_name, dob, gender, email, marital_status, address, city, pincode, state) VALUES ('"
                         + formno + "', '"
                         + name + "', '"

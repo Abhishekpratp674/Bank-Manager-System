@@ -202,7 +202,7 @@ public class SignupTwo extends JFrame implements ActionListener {
 
         }
         try {
-            conn c = new conn();
+            Conn c = new Conn();
 
             String query = "INSERT INTO signuptwo (formo, religion, category, income, education, occupation, pan, aadhar, seniorcitizen, existingAccount) VALUES ('"
                     + formno + "', '"  // Use formno properly
@@ -216,11 +216,11 @@ public class SignupTwo extends JFrame implements ActionListener {
                     + seniorcitizen + "', '"
                     + existingaccount + "')";
 
-
-
             c.s.executeUpdate(query);
 
             //Signup3 object
+            setVisible(false);
+            new SignupThree(formno).setVisible(true);
 
         } catch (Exception e) {
             System.out.println(e);
